@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  # app:
+  #   container_name: dds-app
+  #   build:
+  #     context: ./app
+  #   ports:
+  #     - '3000:3000'
+  #   networks:
+  #     - isolation-network
+  
+  api:
+    container_name: dds-api
+    build:
+      context: ./api
+    ports:
+      - '3001:80'
+    links:
+      - consumer
+  
+  consumer:
+    container_name: dds-consumer
+    build:
+      context: ./consumer
+    restart: always
+    ports:
+      - '5672:5672'
+      - '5672:5672'
