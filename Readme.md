@@ -18,13 +18,11 @@ Requirments:
 ### Start
 
 * make start
-
-Error: App Docker Network issue
 * cd app
 * npm i
 * npm start
 
-* > Listen:
+> Listen:
 * App: http://localhost:3000
 * Api: http://localhost:3001
 * Consumer: http://localhost:5672
